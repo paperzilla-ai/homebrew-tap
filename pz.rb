@@ -5,21 +5,21 @@
 class Pz < Formula
   desc "CLI for Paperzilla — AI-powered scientific paper discovery"
   homepage "https://paperzilla.ai"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.1.0/pz_darwin_amd64.tar.gz"
-      sha256 "e3031ffc3edcd3038cfb265c2fd3663ba21caa92c98959e1d8e6be25ea897ada"
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.2.0/pz_darwin_amd64.tar.gz"
+      sha256 "b82ed3a098b33e5963f2997deedbc462d4a905a51cb84582b0cbd951f8005381"
 
       def install
         bin.install "pz"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.1.0/pz_darwin_arm64.tar.gz"
-      sha256 "48499ee331bad53c3dd4099a2ceb143dd8fb7f9fbf1f01185ee6cd76549566ea"
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.2.0/pz_darwin_arm64.tar.gz"
+      sha256 "8c5e07270e5c0cdbea0091edb6fb87edb95d2f7fac1152c2e697ca80d298d0e7"
 
       def install
         bin.install "pz"
@@ -29,15 +29,15 @@ class Pz < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.1.0/pz_linux_amd64.tar.gz"
-      sha256 "035c233444f97a0fed24fc1470d6face82da540828b11c291dafe6abd96e8d0a"
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.2.0/pz_linux_amd64.tar.gz"
+      sha256 "2bbc0ae3cf70e9253cf8ca58b6ae6beb78f26615d305dca1ba53253f4c2a1dc4"
       def install
         bin.install "pz"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.1.0/pz_linux_arm64.tar.gz"
-      sha256 "e5272a0173c82c94b20c7e28b45814e60f35e4cda404e0a2b701d9ffe8150bb2"
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.2.0/pz_linux_arm64.tar.gz"
+      sha256 "84f5379ee6e78d851db3c7238f2fe3526befe00d13d0b0b8472c3b97befbad84"
       def install
         bin.install "pz"
       end
