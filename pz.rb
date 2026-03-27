@@ -5,23 +5,23 @@
 class Pz < Formula
   desc "CLI for Paperzilla — AI-powered scientific paper discovery"
   homepage "https://paperzilla.ai"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.2.0/pz_darwin_amd64.tar.gz"
-      sha256 "b82ed3a098b33e5963f2997deedbc462d4a905a51cb84582b0cbd951f8005381"
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.3.0/pz_darwin_amd64.tar.gz"
+      sha256 "0fddd08fb11916744de086a0c9357212db53573b919aed7f10ce2f5ab1ab2360"
 
-      def install
+      define_method(:install) do
         bin.install "pz"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.2.0/pz_darwin_arm64.tar.gz"
-      sha256 "8c5e07270e5c0cdbea0091edb6fb87edb95d2f7fac1152c2e697ca80d298d0e7"
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.3.0/pz_darwin_arm64.tar.gz"
+      sha256 "586603a0ab624176595dd0f7ef23fa1bace2912079eaeb310e096553cb530c38"
 
-      def install
+      define_method(:install) do
         bin.install "pz"
       end
     end
@@ -29,16 +29,16 @@ class Pz < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.2.0/pz_linux_amd64.tar.gz"
-      sha256 "2bbc0ae3cf70e9253cf8ca58b6ae6beb78f26615d305dca1ba53253f4c2a1dc4"
-      def install
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.3.0/pz_linux_amd64.tar.gz"
+      sha256 "42eb24529a009d5bd3aeaa0acf82a53921c13c4a2f5216977a12b00ccfd1083b"
+      define_method(:install) do
         bin.install "pz"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.2.0/pz_linux_arm64.tar.gz"
-      sha256 "84f5379ee6e78d851db3c7238f2fe3526befe00d13d0b0b8472c3b97befbad84"
-      def install
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.3.0/pz_linux_arm64.tar.gz"
+      sha256 "d0bba56b6b52fe262e8abd6097c41964503365eea21995c96cfff50316589655"
+      define_method(:install) do
         bin.install "pz"
       end
     end
