@@ -5,21 +5,21 @@
 class Pz < Formula
   desc "CLI for Paperzilla — AI-powered scientific paper discovery"
   homepage "https://paperzilla.ai"
-  version "0.7.3"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.7.3/pz_darwin_amd64.tar.gz"
-      sha256 "f84b5204f74ac82f46d72a3e0549e36d6d580383f9eaba91fa968ca20c18159e"
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.8.0/pz_darwin_amd64.tar.gz"
+      sha256 "b95c4d1dd5c0ba5800ee6cfda2c25b263b6a67d242b131a9f4d887be06f617dc"
 
       define_method(:install) do
         bin.install "pz"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.7.3/pz_darwin_arm64.tar.gz"
-      sha256 "9c3ab83f1bdc4f166d599e713aa72c08dd23b98be2300987d2c75cfbf9d83ecd"
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.8.0/pz_darwin_arm64.tar.gz"
+      sha256 "e7c8ecab465d28e3be259a919ce9d78056615dbf81eb6e363094251c95519382"
 
       define_method(:install) do
         bin.install "pz"
@@ -29,15 +29,15 @@ class Pz < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.7.3/pz_linux_amd64.tar.gz"
-      sha256 "19d1eaa8aca53403210867c7ec02bf8edc146eb69b330c1f5b1aef7b30f6ee5b"
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.8.0/pz_linux_amd64.tar.gz"
+      sha256 "d99d3a00d845ad60823b49297da2ffbea7d6b725033627e0f0baafa6557c1672"
       define_method(:install) do
         bin.install "pz"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paperzilla-ai/pz/releases/download/v0.7.3/pz_linux_arm64.tar.gz"
-      sha256 "81cdab091cd78d65bbf86b7a11847c33fb2c9e0a9b59d92f661f33f670a3580b"
+      url "https://github.com/paperzilla-ai/pz/releases/download/v0.8.0/pz_linux_arm64.tar.gz"
+      sha256 "5d2ad3205d9b39a9559658382be715d24d16f42bc2cd4e1329cc1932676a1d82"
       define_method(:install) do
         bin.install "pz"
       end
